@@ -7,16 +7,17 @@
 html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    font-size: 1.2rem;
 }
 
 body {
-    font-family: 'Lato', sans-serif;
-    color: #4a4a4a;
+    font-family: 'IM Fell DW Pica', serif;
     overflow-x: hidden;
+    background-color: #f5f5dc;
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'IM Fell Double Pica', serif;
 }
 
 section {
@@ -25,7 +26,7 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     scroll-snap-align: start;
     position: relative;
 }
@@ -36,24 +37,41 @@ section {
     width: 100%;
 }
 
-/* Sezione Hero */
 .hero {
-    background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%);
+    /* background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); */
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+    height: 30%;
+    background-image: url('./pic.png');
+    background-size: cover;
+    background-position: center;
+    filter: opacity(0.5);
+    z-index: -1;
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 8vw, 4rem);
     font-weight: 700;
-    color: #6b5b5b;
+    color: #000000;
     margin-bottom: 1rem;
+    margin-top: -30vh;
 }
 
 .hero .subtitle {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     font-weight: 300;
-    color: #8b7b7b;
+    color: #000000; 
     margin-bottom: 2rem;
-    letter-spacing: 0.3em;
+    letter-spacing: clamp(0.1em, 0.5vw, 0.3em);
     text-transform: uppercase;
 }
 
@@ -66,55 +84,41 @@ section {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-}
-
-/* Sezione Quando */
-.when {
-    background: linear-gradient(135deg, #faf9f6 0%, #f0ebe3 100%);
 }
 
 .when h2 {
     font-size: 3rem;
-    color: #6b5b5b;
+    color: #000000;
     margin-bottom: 2rem;
 }
 
 .date {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #8b7b7b;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
 .time {
     font-size: 1.8rem;
-    color: #a09090;
     margin-bottom: 1.5rem;
 }
 
 .detail {
     font-size: 1.1rem;
-    color: #8b7b7b;
-    font-style: italic;
-}
-
-/* Sezione Dove */
-.where {
-    background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%);
+    color: #000000;
 }
 
 .where h2 {
     font-size: 3rem;
-    color: #6b5b5b;
-    margin-bottom: 2rem;
+    color: #000000;
 }
 
 .where h3 {
     font-size: 1.8rem;
-    color: #8b7b7b;
+    color: #000000;
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .where h3:first-of-type {
@@ -124,13 +128,12 @@ section {
 .venue {
     font-size: 1.5rem;
     font-weight: 400;
-    color: #6b5b5b;
+    color: #000000;
     margin-bottom: 0.5rem;
 }
 
 .address {
     font-size: 1.1rem;
-    color: #a09090;
     line-height: 1.6;
     position: relative;
 }
@@ -140,19 +143,20 @@ section {
     align-items: center;
     margin-left: 0;
     margin-top: 0.5rem;
-    color: #8b7b7b;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.2s ease;
     vertical-align: middle;
 }
 
 .map-link:hover {
-    color: #6b5b5b;
+    color: #000000;
     transform: scale(1.1);
 }
 
 .map-link .material-icons {
     font-size: 2rem;
+    color: #8BA086;
 }
 
 .mt-4 {
@@ -161,14 +165,15 @@ section {
 
 /* Sezione Timeline */
 .timeline {
-    background: linear-gradient(135deg, #e8e8e0 0%, #f5f5f0 100%);
+    /* verde eucalipto */
+    background: #8BA086;    
 }
 
 .timeline h2 {
     font-size: 3rem;
-    color: #6b5b5b;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    color: white;
 }
 
 .timeline-container {
@@ -187,7 +192,7 @@ section {
     bottom: 0;
     left: 50%;
     width: 2px;
-    background: #c0b0a0;
+    background: white;
     transform: translateX(-50%);
     z-index: 0;
 }
@@ -229,7 +234,7 @@ section {
 }
 
 .timeline-item:hover .timeline-icon {
-    color: #6b5b5b;
+    color: white;
     transform: scale(1.1);
 }
 
@@ -242,7 +247,7 @@ section {
 .timeline-time {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #6b5b5b;
+    color: white;
     white-space: nowrap;
 }
 
@@ -251,7 +256,7 @@ section {
     left: 50%;
     width: calc(50% - 6rem);
     height: 2px;
-    background: #c0b0a0;
+    background: white;
     z-index: 0;
 }
 
@@ -269,10 +274,9 @@ section {
 .timeline-dot {
     width: 20px;
     height: 20px;
-    background: #8b7b7b;
+    background: #8BA086;
     border-radius: 50%;
     border: 4px solid white;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     flex-shrink: 0;
     position: absolute;
@@ -282,49 +286,60 @@ section {
 }
 
 .timeline-item:hover .timeline-dot {
-    transform: translateX(-50%) scale(1.3);
-    background: #6b5b5b;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    background: transparent;
 }
 
 .timeline-label {
     font-size: 0.95rem;
-    color: #8b7b7b;
+    color: white;
     line-height: 1.4;
 }
 
 .material-icons.timeline-icon {
     font-size: 6rem;
-    color: #8b7b7b;
+    color: white;
     flex-shrink: 0;
     background-color: transparent;
     transition: all 0.3s ease;
 }
 
-/* Sezione Regalo */
 .gift {
-    background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%);
+    padding: 2rem
 }
 
 .gift h2 {
     font-size: 3rem;
-    color: #6b5b5b;
+    color: #000000;
     margin-bottom: 2rem;
+}
+
+.gift img {
+    width: 3rem;
+    height: auto;
 }
 
 .message {
     font-size: 1.3rem;
     line-height: 1.8;
-    color: #6b5b5b;
+    color: #000000;
     margin-bottom: 3rem;
 }
 
 .info-box {
-    background: white;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    margin: 2rem 0;
+}
+
+.info-box img {
+    width: 2rem;
+    height: auto;
+}
+
+.info-box > div:first-of-type {
+    margin-bottom: 1rem;
 }
 
 .gift-box {
@@ -334,34 +349,31 @@ section {
 
 .gift-box h3 {
     font-size: 1.8rem;
-    color: #8b7b7b;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
 .gift-box p {
     font-size: 1.1rem;
-    color: #6b5b5b;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
 .gift-box .small {
     font-size: 0.9rem;
-    color: #a09090;
-    font-style: italic;
 }
 
 .closing {
     font-size: 1.3rem;
-    color: #8b7b7b;
+    color: #000000;
     margin-top: 3rem;
-    font-style: italic;
     line-height: 1.8;
 }
 
 /* Indicatore di Scroll */
 .scroll-indicator {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -378,14 +390,15 @@ section {
 }
 
 .scroll-indicator span {
-    font-size: 0.9rem;
-    color: #8b7b7b;
+    font-size: 0.8rem;
+    color: #000000;
     letter-spacing: 0.1em;
+    animation: bounce 2s infinite;
 }
 
 .scroll-indicator span.scroll-arrow {
     font-size: 2rem;
-    color: #8b7b7b;
+    color: #000000;
     animation: bounce 2s infinite;
 }
 
@@ -427,10 +440,6 @@ section {
         font-size: 1.1rem;
     }
     
-    section {
-        padding: 1rem;
-    }
-    
     .timeline-container {
         flex-direction: column;
         gap: 1rem;
@@ -444,7 +453,7 @@ section {
         bottom: 0;
         width: 2px;
         height: 100%;
-        background: #c0b0a0;
+        background: white;
         transform: none;
     }
     
@@ -469,10 +478,12 @@ section {
         margin-left: 4.5rem;
     }
     
-    .material-icons.timeline-icon {
-        font-size: 3.5rem;
+    .timeline-icon {
+        width: 2.5rem;
+        height: auto;
+        filter: invert(1);
     }
-    
+
     .timeline-line {
         top: 1.5rem;
         width: 2rem !important;
@@ -494,10 +505,6 @@ section {
         left: 2rem;
         top: 1rem;
         transform: translateX(-50%);
-    }
-    
-    .timeline-item:hover .timeline-dot {
-        transform: translateX(-50%) scale(1.3);
     }
     
     .timeline-label {
