@@ -45,7 +45,7 @@ section {
 .hero::before {
     content: '';
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -56,6 +56,12 @@ section {
     background-position: center;
     filter: opacity(0.5);
     z-index: -1;
+}
+
+@media (max-width: 500px) {
+    .hero::before {
+        top: 50%;
+    }
 }
 
 .hero h1 {
@@ -243,6 +249,12 @@ section {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
+}
+
+@media (max-width: 500px) {
+    .timeline-info.down {
+        margin-top: 18px;
+    }
 }
 
 .timeline-time {
