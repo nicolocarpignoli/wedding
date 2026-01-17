@@ -172,16 +172,13 @@ section {
 .timeline {
     /* verde eucalipto */
     background: #8BA086;
-    padding: 2rem 1rem;
+    padding: 1rem;
 }
 
 .timeline h2 {
     font-size: 2rem;
     margin-top: 0;
     color: white;
-    position: fixed;
-    top: 2rem;
-    left: 0;
     width: 100%;
 }
 
@@ -194,6 +191,7 @@ section {
     margin: auto auto 0 auto;
     padding: 1rem 0;
     position: relative;
+    margin-top: 1.5rem;
 }
 
 .timeline .info {
@@ -494,6 +492,11 @@ p.iban {
 
 /* Responsive */
 @media (max-width: 768px) {
+    section.timeline {
+        padding-top: 2rem;
+        justify-content: start;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -597,6 +600,12 @@ p.iban {
 .copy img {
     width: 1rem;
     height: auto;
+}
+
+@media (max-width: 380px) {
+    .scroll-indicator:not(.first) {
+        display: none;
+    }
 }
 
 @media (min-width: 769px) {
