@@ -201,7 +201,7 @@ section {
     text-align: center;
     color: #fff;
     max-width: 80%;
-    margin-top: 2%;
+    margin-top: 2rem;
     font-size: 0.85rem;
 }
 
@@ -266,6 +266,10 @@ section {
 @media (max-width: 500px) {
     .timeline-info.down {
         margin-top: 18px;
+    }
+    
+    .timeline-container {
+        gap: 0.5rem;
     }
 }
 
@@ -533,11 +537,11 @@ p.iban {
     }
     
     .timeline-item:nth-child(odd) .timeline-content {
-        padding-right: 1rem;
+        padding-right: 0;
     }
     
     .timeline-item:nth-child(even) .timeline-content {
-        padding-left: 1rem;
+        padding-left: 0;
     }
     
     .timeline-icon {
