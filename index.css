@@ -198,7 +198,7 @@ section {
     text-align: center;
     color: #fff;
     max-width: 80%;
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-size: 0.85rem;
 }
 
@@ -493,7 +493,7 @@ p.iban {
 /* Responsive */
 @media (max-width: 768px) {
     section.timeline {
-        padding-top: 2rem;
+        padding-top: 0.5rem;
         justify-content: start;
     }
 
@@ -524,7 +524,7 @@ p.iban {
     
     .timeline h2 {
         font-size: 2rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
     }
     
     .timeline-container {
@@ -620,6 +620,6 @@ p.iban {
     }
 
     .timeline-container {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 }
