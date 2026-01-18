@@ -186,7 +186,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 1.25rem;
+    gap: 1rem;
     max-width: 1200px;
     margin: auto auto 0 auto;
     padding: 1rem 0;
@@ -237,13 +237,13 @@ section {
 
 .timeline-item:nth-child(odd) .timeline-content {
     flex-direction: row;
-    text-align: right;
+    text-align: left;
     padding-right: 2.5rem;
 }
 
 .timeline-item:nth-child(even) .timeline-content {
     flex-direction: row-reverse;
-    text-align: left;
+    text-align: right;
     padding-left: 2.5rem;
 }
 
@@ -282,7 +282,7 @@ section {
     left: 50%;
     top: 50%;
     transform: translateY(-50%);
-    width: calc(50% - 6rem);
+    width: calc(50% - 4rem);
     height: 2px;
     background: white;
     z-index: 0;
@@ -449,7 +449,7 @@ p.iban {
 /* Indicatore di Scroll */
 .scroll-indicator {
     position: absolute;
-    bottom: 1.5rem;
+    bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -552,7 +552,7 @@ p.iban {
     }
     
     .timeline-line {
-        width: calc(50% - 3.5rem);
+        width: calc(50% - 2.5rem);
     }
     
     .timeline-time {
@@ -580,7 +580,7 @@ p.iban {
     .bottom-frame {
         position: absolute;
         left: 1rem;
-        bottom: 2rem;
+        bottom: 4rem;
         width: calc(100% - 2rem);
     }
 }
@@ -602,6 +602,10 @@ p.iban {
     height: auto;
 }
 
+.scroll-indicator.first {
+    bottom: 2.5rem;
+}
+
 @media (max-width: 380px) {
     .scroll-indicator:not(.first) {
         display: none;
@@ -609,6 +613,16 @@ p.iban {
 }
 
 @media (min-width: 769px) {
+    .timeline-container {
+        gap: 0;
+    }
+
+    .gift .content .message {
+        max-width: 80%;
+        text-align: center;
+        justify-self: center;
+    }
+
     .top-frame {
         position: absolute;
         top: 1.5rem;
@@ -616,7 +630,7 @@ p.iban {
 
     .bottom-frame {
         position: absolute;
-        bottom: 4rem;
+        bottom: 5rem;
     }
 
     .timeline-container {
