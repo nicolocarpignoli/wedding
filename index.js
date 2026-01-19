@@ -1,4 +1,3 @@
-// Gestione smooth scroll al click dell'indicatore
 document.addEventListener('DOMContentLoaded', () => {
     const scrollIndicators = document.querySelectorAll('.scroll-indicator');
     
@@ -8,7 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const nextSection = sections[index + 1];
             
             if (nextSection) {
-                nextSection.scrollIntoView({ behavior: 'smooth' });
+                const targetPosition = nextSection.offsetTop;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
     });
