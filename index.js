@@ -1,21 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const scrollIndicators = document.querySelectorAll('.scroll-indicator');
-    
-    scrollIndicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            const sections = document.querySelectorAll('section');
-            const nextSection = sections[index + 1];
-            
-            if (nextSection) {
-                const targetPosition = nextSection.offsetTop;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
     // Nascondi l'indicatore di scroll nell'ultima sezione
     const sections = document.querySelectorAll('section');
     const lastSection = sections[sections.length - 1];
