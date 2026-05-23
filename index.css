@@ -20,6 +20,12 @@ h1, h2, h3 {
     font-family: 'IM Fell Double Pica', serif;
 }
 
+.link-inline {
+    display: inline-block;
+    color: inherit;
+    text-decoration: underline !important;
+}
+
 section {
     min-height: 100dvh;
     display: flex;
@@ -266,7 +272,7 @@ section {
     }
     
     .timeline-container {
-        gap: 0.5rem;
+        gap: 0.25rem;
     }
 }
 
@@ -530,7 +536,7 @@ p.iban {
     .timeline-container {
         max-width: 100%;
         padding: 0.5rem 0.5rem;
-        gap: 0.5rem;
+        gap: 0.25rem;
     }
     
     .timeline-content {
@@ -583,6 +589,10 @@ p.iban {
         bottom: 2rem;
         width: calc(100% - 2rem);
     }
+}
+
+.gap-1 {
+    gap: 0.1rem;
 }
 
 .copy {
